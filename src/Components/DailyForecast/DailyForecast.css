@@ -1,0 +1,238 @@
+/* ////////////////////////////// .dailyForecast ////////////////////////////// */
+.header {
+    padding: 10px 0 0 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.dailyForecast {
+    width: 100%;
+    margin: 10px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(205,205,205, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(223, 229, 236);
+}
+
+#dailyContainer {
+    height: 100%;
+    padding: 10px 10px;
+    align-items: center;
+}
+
+#dailyList {
+    display: grid;  
+    grid-auto-flow: row;
+    grid-gap: 5px;  
+    /* grid-auto-columns: 27%; */
+}
+
+.dailyItem {
+    padding: 5px 0 ;
+    border-radius: 10px;
+}
+.dailyItem.active {
+    background-color: rgb(245, 245, 245);
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1.8fr 0.6fr 0.6fr 1.3fr 0.3fr;
+    grid-auto-rows: auto;
+}
+.dailyItem:hover {
+    cursor: pointer;
+    background-color: rgb(245, 245, 245);
+}
+.dailyItemTitle {
+    padding-left: 10px ;
+    font-size: 1.2rem;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.dailyItemIcon {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dailyItemIcon img {
+    width: 45px;
+    height: auto;
+    object-fit: contain;
+}
+.dailyItemPop {
+    font-size: 13px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dailyItemTemp {
+    font-size: 16px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.dailyItemDetails {
+    font-size: 1.2rem;
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.arrow {
+    grid-column: 5 / 6;
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.arrow.active {
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+.extendGrid {
+    position: relative;
+    visibility: hidden;
+    height: 0;
+    display: grid;
+    grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
+    grid-auto-rows: min-content;
+    transition: 0.5s;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.extendGrid.active{
+    visibility: visible;
+    height: 320px;
+    transition: 0.5s;
+    border-top: 1px dashed black;
+}
+.extendForecastIcon{
+    margin: 5px;
+}
+.dailyIcon{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dailyIcon img {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+}
+.dailyDescription {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+    padding-bottom: 5px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: end;
+    justify-content: left;
+}
+.dailyTempMinMax {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+    padding-top: 5px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: start;
+    justify-content: left;
+}
+.dailyPop {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.dailyWind {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.dailyPressure {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.dailyUv {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;    
+}
+.dailyHumimdity {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.dailyDewPoint {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.dailyTempFeelsLike  {
+    grid-column: 2 / 5;
+    grid-row: 5 / 6;
+    padding: 10px 0px 5px 0px;
+    display: grid;
+    grid-template-columns: 1.3fr repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.columnTitle{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.rowTitle {
+    padding-left: 20px;
+}
+.tempItem {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.sun-moon {
+    grid-column: 2 / 5;
+    grid-row: 6 / 7;
+    padding: 5px 0px 10px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.content {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.timeItem {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
