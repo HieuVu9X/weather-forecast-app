@@ -1,0 +1,215 @@
+#currentContainer {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(205,205,205, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(223, 229, 236);
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 7px;  
+}
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+.temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+.moreTemp {
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns:  1fr 0.2rem 1fr 0.2rem 1fr;
+}
+.moreTemp .realFeel {
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.moreTemp .tempMax {
+    grid-column: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.moreTemp .tempMin {
+    grid-column: 5/6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.moreDetails {
+    width: 100%;
+    margin: 10px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.item {
+    padding: 10px;
+    font-size: 16px;
+    background: rgb(255,255,255);
+    border: 1px solid rgba(205,205,205, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(223, 229, 236);
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon {
+    margin: 0 5px;
+}
+.shape {
+    position: relative;
+    width: 100%;
+    display: block;
+    padding-bottom: 70%;
+}
+.details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 2.0rem;
+}
+.windCompass {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    display: inline-flex;
+}
+.compassDisplay {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid rgba(200,200,200, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+#speed {
+    font-size: 1.5rem;
+}
+#direction {
+    font-size: 1.2rem;
+}
+.windArrow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(135deg) translateY(-110%);
+}
+.sun_rise_set {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.horizon {
+    font-size: 1rem;
+}
+.sunrise {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    text-align: center;
+    font-size: 1rem;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    border: 5px solid rgba(250, 182, 12, 0.8);
+    border-bottom: 0;
+}
+.sunset {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    text-align: center;
+    font-size: 1rem;
+    left: 0;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    border: 5px solid rgba(128, 151, 167, 0.8);
+    border-top: 0;
+}
+.pressure, .visibility {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.unit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+.dew_point {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    font-size: 1.2rem;
+}
+#uvi {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 15%;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.deg {
+    transform: rotate(-45deg);
+}
+

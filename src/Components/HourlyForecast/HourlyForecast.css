@@ -1,0 +1,118 @@
+/* ////////////////////////////// .hourlyForecast ////////////////////////////// */
+.header {
+    padding: 10px 0 0 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.hourlyForecast {
+    width: 100%;
+    margin: 10px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(205,205,205, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(223, 229, 236);
+}
+
+/* ////////////////////////////// .hourlyChart ////////////////////////////// */
+.hourlyChart {
+
+}
+/* ////////////////////////////// .hourlyList ////////////////////////////// */
+#hourlyContainer {
+    height: 100%;
+    padding: 10px 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#hourList {  
+    display: grid;  
+    grid-auto-flow: column;
+    grid-auto-columns: 27%;
+    grid-gap: 5px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    transition: all 0.5s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+    cursor: pointer;
+}
+
+#hourList.active {
+    cursor: pointer;
+    transform: scale(1);
+  }
+
+.slider-icon.left, .slider-icon.right {
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    opacity:0.4;
+    z-index: 1;
+    cursor: pointer;
+    transition: 1s;
+}
+.hidden{
+	display: none;
+    transition: 1s;
+}
+
+.slider-icon.left{ left: 0}
+.slider-icon.right{ right: 0}
+.slider-icon.left:hover, .slider-icon.right:hover { opacity: 1; }
+
+/* ////////////////////////////// .hourlyItem ////////////////////////////// */
+.hourlyItem {   
+    padding: 5px;
+    display: grid;
+    border: 1px solid rgba(205,205,205, 0.8);
+    border-radius: 10px;
+    grid-template-columns: 1.3fr 1fr;
+    grid-auto-rows: auto;
+}
+.hourlyItem:hover {
+    background-color: rgb(245, 245, 245);
+}
+.forecastIcon {
+    padding-right: 5px ;
+}
+.hourlyItemTitle {
+    font-size: 1.2rem;
+    grid-column: 1 / 3;
+    text-align: center;
+}
+.hourlyItemDetails {
+    font-size: 1.2rem;
+    grid-column: 1 / 3;
+    text-align: center;
+}   
+.hourlyItemIcon {
+    grid-column: 1 / 2;
+    grid-row: 3 / 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hourlyItemTemp {
+    font-size: 16px;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    display: flex;
+    align-items: center;
+}
+.hourlyItemPop {
+    font-size: 16px;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    display: flex;
+    align-items: center;
+}
+.hourlyItemWind {
+    font-size: 16px;
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    display: flex;
+    align-items: center;
+}

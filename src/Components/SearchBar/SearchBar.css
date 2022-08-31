@@ -1,0 +1,120 @@
+.search {
+  /* text-align: center; */
+  padding: 20px 0 10px 0;
+  position: relative;
+}
+
+.searchInputs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search input {
+  padding: 15px;
+  height: 60px;
+  width: 300px;
+  font-size: 18px;
+  background: rgb(255,255,255);
+  border: 1px solid rgba(205,205,205, 0.8);
+  border-right-width: 0;
+  border-radius: 20px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px
+}
+
+/* ::placeholder {
+  color: #f8f8f8;
+} */
+
+.searchIcon {
+  height: 60px;
+  width: 50px;
+  background: rgb(255,255,255);
+  border: 1px solid rgba(205,205,205, 0.8);
+  border-left-width: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: grid;
+  place-items: center;
+}
+
+input:focus {
+  outline: none;
+}
+.searchIcon svg {
+  font-size: 35px;
+}
+
+/* .iconOptions {
+  position: absolute;
+  height: 100%;
+  width: 105px;
+  left: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.celcius, .fahrenheit {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.celcius:hover, .fahrenheit:hover {
+  cursor: pointer;
+} */
+
+.dataResult {
+  position: absolute; 
+  width: 100%;
+  margin: 5px 0px;
+  padding: 0;
+  background-color: rgb(255,255,255); 
+  border-radius: 20px;
+  border: 1px solid rgba(205,205,205, 0.8);
+  overflow: hidden;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+.dataResult .dataItem {
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 0.7fr 0.9fr;
+  grid-auto-rows: 50px;
+}
+
+.itemDetails {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.itemDetails img {
+  display: block;
+  place-items: center;
+  width: 50px;
+  height: auto;
+}
+
+.dataItem:hover {
+  background-color: rgb(225, 225, 225);
+}
+
+#searchBtn {
+  cursor: pointer;
+}
+
+#clearBtn {
+  cursor: pointer;
+}
