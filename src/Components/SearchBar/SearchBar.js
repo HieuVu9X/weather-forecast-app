@@ -66,17 +66,17 @@ function SearchBar({ placeholder, setLocation, units, unitIcon, setUnits, setUni
         setSearchData(null);
 	}
 
-    // const metric = () => {
-    //     setUnits("metric");
-    //     setUnitIcon('°C');
-    //     setGet(true);
-    // }
+    const metric = () => {
+        setUnits("metric");
+        setUnitIcon('°C');
+        setGet(true);
+    }
 
-    // const imperial = () => {
-    //     setUnits("imperial");
-    //     setUnitIcon('°F');
-    //     setGet(true);
-    // }
+    const imperial = () => {
+        setUnits("imperial");
+        setUnitIcon('°F');
+        setGet(true);
+    }
 
     const { 
         searchData, 
